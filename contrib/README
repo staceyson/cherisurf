@@ -1,0 +1,3 @@
+The NetSurf 3.1 source with Cheri modifications goes in this directory:
+
+% git clone https://github.com/staceyson/netsurf.git
