@@ -12,9 +12,11 @@ MAN=
 
 CWARNFLAGS+=	-Wno-cast-qual
 
-
-#LDX=		-lxcb-icccm -lxcb-imag -lxcb-shm -lxcb-keysyms -lxcb-util -lxcb
+.if defined(NETSURF_X_SURFACE)
+LDX=		-lxcb-icccm -lxcb-image -lxcb-shm -lxcb-keysyms -lxcb-util -lxcb
+.else
 LDX=
+.endif
 
 LDADD=		\
 		-L${.CURDIR}/../libcss \
